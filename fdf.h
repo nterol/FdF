@@ -6,7 +6,7 @@
 /*   By: nterol <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/18 15:28:47 by nterol            #+#    #+#             */
-/*   Updated: 2017/03/16 17:00:43 by nterol           ###   ########.fr       */
+/*   Updated: 2017/03/16 19:20:25 by nterol           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,19 @@
 # include <stdio.h>
 # include <math.h>
 
-# define HEIGHT 1300
 # define WIDTH 2300
-# define TITLE "Nicki Minaj a trois"
+# define HEIGHT 1300
+# define TITLE "Hello this is window"
 # define LEFT 123
 # define UP 126
 # define DOWN 125
 # define RIGHT 124
 # define PAD_PLUS 69
 # define PAD_SUB 78
+# define WIDTH_PLUS 88
+# define WIDTH_MINUS 86
+# define HEIGHT_PLUS 91
+# define HEIGHT_MINUS 84
 # define ESC 53
 # define ALPHA M_PI * env->alph / 180
 
@@ -47,9 +51,9 @@ typedef struct		s_fdf {
 	int				z_height;
 	int				height;
 	int				width;
-	double			zoom;
-	int				base_x;
-	int				base_y;
+	double		zoom;
+	double		base_x;
+	double		base_y;
 	int				z_min;
 	int				z_max;
 	int				x0;
@@ -63,6 +67,8 @@ typedef struct		s_fdf {
 	int				err;
 	int				e2;
 	int				alph;
+	int				width_control;
+	int				height_control;
 	struct s_fdf	*next;
 
 }					t_fdf;

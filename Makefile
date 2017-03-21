@@ -6,7 +6,7 @@
 #    By: nterol <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/18 15:10:26 by nterol            #+#    #+#              #
-#    Updated: 2017/03/08 05:44:08 by nterol           ###   ########.fr        #
+#    Updated: 2017/03/18 12:42:24 by nterol           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,8 +27,9 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	#make -C ./libft
 	#make -C ./minilibx_macos/
-	gcc -c $(SRC) $(FLAGS)
-	gcc -o $(NAME) $(OBJ) $(LIB) -I minilibx_macos ./minilibx_macos/libmlx.a $(FRAM)
+	gcc -c  $(SRC) $(FLAGS)
+	gcc -o $(NAME) $(OBJ) $(LIB) -I minilibx_macos\
+		./minilibx_macos/libmlx.a $(FRAM)
 
 clean :
 	rm -rf $(OBJ)

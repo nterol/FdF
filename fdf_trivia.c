@@ -31,7 +31,7 @@ void		line(t_fdf *env)
 	env->err = (env->dx > env->dy ? env->dx : -env->dy) / 2;
 	while (1)
 	{
-		if (env->x0 < env->width && env->y0 < env->height - 1 && env->x0 > 1\
+		if (env->x0 < env->width && env->y0 < env->height && env->x0 > 1\
 				&& env->y0 > 1)
 			mlx_pixel_image(env, env->x0, env->y0, env->color);
 		if ((env->x0 == env->x1) && (env->y0 == env->y1))
@@ -70,8 +70,9 @@ int			f_y(int x, int y, t_fdf *env)
 
 void		color_change(int x, int y, t_fdf *env)
 {
+	env->color = 0xC0FFF4;
 	if (env->map[y][x] == env->z_min)
-		env->color = 0xFF6969;
+		env->color = 0xFFD5C0;
 	if (env->map[y][x] == env->z_max)
-		env->color = 0xFF69B4;
+		env->color = 0xFFC0CB;
 }
